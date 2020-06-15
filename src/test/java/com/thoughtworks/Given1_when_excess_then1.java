@@ -44,9 +44,15 @@ public class Given1_when_excess_then1 {
     }
 
     @Test
-    public void given35_when_excess_then35_test(){
-        String str = fizzBuzz.sayResult(35);
+    public void given70_when_excess_then70_test(){
+        String str = fizzBuzz.sayResult(70);
         assertEquals("BuzzWhizz",str);
+    }
+
+    @Test
+    public void given30_when_excess_then30_test(){
+        String str =  fizzBuzz.sayResult(30);
+        assertEquals("Fizz",str);
     }
 
 
