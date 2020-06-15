@@ -21,32 +21,32 @@ public class FizzBuzzTest {
 
     @Test
     public void should_return_buzz_given_num_5() {
-        String result = fizzBuzz.sayResult(5);
+        String result = fizzBuzz.sayResult(40);
         assertEquals("Buzz", result);
 
     }
 
     @Test
-    public void should_return_fizzBuzz_given_num_15() {
-        String result = fizzBuzz.sayResult(15);
+    public void should_return_fizzBuzz_given_num_3_and_5_double() {
+        String result = fizzBuzz.sayResult(60);
         assertEquals("FizzBuzz", result);
     }
 
     @Test
     public void should_return_whizz_given_num_7() {
-        String result = fizzBuzz.sayResult(7);
+        String result = fizzBuzz.sayResult(14);
         assertEquals("Whizz", result);
     }
 
     @Test
-    public void should_return_fizzWhizz_given_num_21() {
+    public void should_return_fizzWhizz_given_num_3_and_7_double() {
         String result = fizzBuzz.sayResult(21);
         assertEquals("FizzWhizz", result);
     }
 
     @Test
-    public void should_return_buzzWhizz_given_num_70() {
-        String result = fizzBuzz.sayResult(70);
+    public void should_return_buzzWhizz_given_num_5_and_7_double() {
+        String result = fizzBuzz.sayResult(140);
         assertEquals("BuzzWhizz", result);
     }
 
@@ -60,6 +60,13 @@ public class FizzBuzzTest {
     public void should_return_BuzzWhizz_given_num_contains_5() {
         String result = fizzBuzz.sayResult(35);
         assertEquals("BuzzWhizz", result);
+    }
+
+
+    @Test
+    public void should_return_Fizz_given_num_contains_7() {
+        String result = fizzBuzz.sayResult(71);
+        assertEquals("Fizz", result);
     }
 
 

@@ -7,6 +7,12 @@ public class FizzBuzz {
         String Buzz = "Buzz";
         String Whizz = "Whizz";
 
+        if(String.valueOf(num).contains("7")){
+            System.out.println("resultNum:" + "Fizz");
+            return "Fizz";
+
+        }
+
         if(String.valueOf(num).contains("5")){
             System.out.println("resultNum:" + "Fizz");
             return "BuzzWhizz";
