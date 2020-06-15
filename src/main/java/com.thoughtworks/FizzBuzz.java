@@ -7,23 +7,7 @@ public class FizzBuzz {
         String Buzz = "Buzz";
         String Whizz = "Whizz";
 
-        if(String.valueOf(num).contains("7")){
-            System.out.println("resultNum:" + "Fizz");
-            return "Fizz";
-
-        }
-
-        if(String.valueOf(num).contains("5")){
-            System.out.println("resultNum:" + "Fizz");
-            return "BuzzWhizz";
-
-        }
-        if(String.valueOf(num).contains("3")){
-            System.out.println("resultNum:" + "Fizz");
-            return "Fizz";
-
-        }
-
+        result = processInputContainsSpecialNum(num);
         if(num % 3 == 0){
             result  = result + Fizz;
 
@@ -43,5 +27,25 @@ public class FizzBuzz {
         }
 
         return result;
+    }
+
+    private String processInputContainsSpecialNum(int num) {
+        if(String.valueOf(num).contains("7")){
+            System.out.println("resultNum:" + "Fizz");
+            return "Fizz";
+
+        }
+
+        if(String.valueOf(num).contains("5")){
+            System.out.println("resultNum:" + "Fizz");
+            return "BuzzWhizz";
+
+        }
+        if(String.valueOf(num).contains("3")){
+            System.out.println("resultNum:" + "Fizz");
+            return "Fizz";
+
+        }
+        return "";
     }
 }
