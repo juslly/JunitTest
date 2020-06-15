@@ -2,53 +2,40 @@ package com.thoughtworks;
 
 public class FizzBuzz {
     public String sayResult(int num){
+        String result  = "";
+        String Fizz = "Fizz";
+        String Buzz = "Buzz";
+        String Whizz = "Whizz";
 
+        if(String.valueOf(num).contains("5")){
+            System.out.println("resultNum:" + "Fizz");
+            return "BuzzWhizz";
+
+        }
         if(String.valueOf(num).contains("3")){
             System.out.println("resultNum:" + "Fizz");
             return "Fizz";
 
         }
-        if(num % 3 == 0 && num % 5 == 0 && num % 7 == 0){
-            System.out.println("resultNum:" + "FizzBuzzWhizz");
-            return "FizzBuzzWhizz";
-
-        }
-        if(num % 3 == 0 && num % 5 == 0 ){
-            System.out.println("resultNum:" + "FizzBuzz");
-            return "FizzBuzz";
-
-        }
-
-        if(num % 3 == 0 && num % 7 == 0 ){
-            System.out.println("resultNum:" + "FizzWhizz");
-            return "FizzWhizz";
-
-        }
-        if(num % 5 == 0 && num % 7 == 0 ){
-            System.out.println("resultNum:" + "BuzzWhizz");
-            return "BuzzWhizz";
-
-        }
-
-
 
         if(num % 3 == 0){
-            System.out.println("resultNum:" + "Fizz");
-            return "Fizz";
+            result  = result + Fizz;
 
         }
         if(num % 5 == 0){
-            System.out.println("resultNum:" + "Buzz");
-            return "Buzz";
+            result  = result + Buzz;
 
         }
 
         if(num % 7 == 0){
-            System.out.println("resultNum:" + "Whizz");
-            return "Whizz";
+            result  = result + Whizz;
         }
 
-        System.out.println("resultNum:" + num);
-        return String.valueOf(num);
+        if("".equals(result)){
+            System.out.println(String.valueOf(num));
+            result  = String.valueOf(num);
+        }
+
+        return result;
     }
 }
