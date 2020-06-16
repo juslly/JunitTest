@@ -52,32 +52,77 @@ public class MarksCarTest {
         assertForExpAndResult(expectedPosition, processCommandsResult);
 
     }
-//
-//    @Test
-//    public void should_return_position_given_init_position_00_and_commands_SM() {
-//        //初始位置为（0，0）指令为SM
-//    }
-//
-//    @Test
-//    public void should_return_position_given_init_position_00_and_commands_SL() {
-//        //初始位置为（0，0）指令为SL
-//    }
-//
-//    @Test
-//    public void should_return_position_given_init_position_00_and_commands_SR() {
-//        //初始位置为（0，0）指令为SR
-//    }
-//
-//    @Test
-//    public void should_return_position_given_init_position_00_and_commands_EM() {
-//        //初始位置为（0，0）指令为EM
-//    }
-//
-//    @Test
-//    public void should_return_position_given_init_position_00_and_commands_EL() {
-//        //初始位置为（0，0）指令为EL
-//    }
-//
+
+
+    @Test
+    public void should_return_position_given_init_position_00_and_commands_SM() {
+        //初始位置为（0，0）指令为N,发送指令为L
+        //设置初始位置和方向
+        Position initPosition = new Position(0,0,"S");
+        String command = "M";
+        Position processCommandsResult = marksCar.processCommands(initPosition,command);
+        //期待值
+        Position expectedPosition = new Position(0, -1, "S");
+        //断言测试
+        assertForExpAndResult(expectedPosition, processCommandsResult);
+
+    }
+
+    @Test
+    public void should_return_position_given_init_position_00_and_commands_SL() {
+        //初始位置为（0，0）指令为N,发送指令为L
+        //设置初始位置和方向
+        Position initPosition = new Position(0,0,"S");
+        String command = "L";
+        Position processCommandsResult = marksCar.processCommands(initPosition,command);
+        //期待值
+        Position expectedPosition = new Position(0, 0, "E");
+        //断言测试
+        assertForExpAndResult(expectedPosition, processCommandsResult);
+
+    }
+    @Test
+    public void should_return_position_given_init_position_00_and_commands_SR() {
+        //初始位置为（0，0）指令为N,发送指令为L
+        //设置初始位置和方向
+        Position initPosition = new Position(0,0,"S");
+        String command = "R";
+        Position processCommandsResult = marksCar.processCommands(initPosition,command);
+        //期待值
+        Position expectedPosition = new Position(0, 0, "W");
+        //断言测试
+        assertForExpAndResult(expectedPosition, processCommandsResult);
+
+    }
+
+    @Test
+    public void should_return_position_given_init_position_00_and_commands_EM() {
+        //初始位置为（0，0）指令为N,发送指令为L
+        //设置初始位置和方向
+        Position initPosition = new Position(0,0,"E");
+        String command = "M";
+        Position processCommandsResult = marksCar.processCommands(initPosition,command);
+        //期待值
+        Position expectedPosition = new Position(1, 0, "E");
+        //断言测试
+        assertForExpAndResult(expectedPosition, processCommandsResult);
+
+    }
+
+    @Test
+    public void should_return_position_given_init_position_00_and_commands_EL() {
+        //初始位置为（0，0）指令为N,发送指令为L
+        //设置初始位置和方向
+        Position initPosition = new Position(0,0,"E");
+        String command = "L";
+        Position processCommandsResult = marksCar.processCommands(initPosition,command);
+        //期待值
+        Position expectedPosition = new Position(0, 0, "N");
+        //断言测试
+        assertForExpAndResult(expectedPosition, processCommandsResult);
+
+    }
+
 //    @Test
 //    public void should_return_position_given_init_position_00_and_commands_ER() {
 //        //初始位置为（0，0）指令为ER
