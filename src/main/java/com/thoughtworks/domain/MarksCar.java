@@ -40,6 +40,20 @@ public class MarksCar {
             if("L".equals(command)){
                 resultPosition.setOrientation("N");
             }
+            if("R".equals(command)){
+                resultPosition.setOrientation("S");
+            }
+
+        }
+
+
+        if("W".equals(initPosition.getOrientation())){
+            if("M".equals(command)){
+                resultPosition.setLongitude(initPosition.getLongitude() - 1);
+            }
+//            if("L".equals(command)){
+//                resultPosition.setOrientation("N");
+//            }
 //            if("R".equals(command)){
 //                resultPosition.setOrientation("S");
 //            }

@@ -123,11 +123,34 @@ public class MarksCarTest {
 
     }
 
-//    @Test
-//    public void should_return_position_given_init_position_00_and_commands_ER() {
-//        //初始位置为（0，0）指令为ER
-//    }
-//
+    @Test
+    public void should_return_position_given_init_position_00_and_commands_ER() {
+        //初始位置为（0，0）指令为N,发送指令为L
+        //设置初始位置和方向
+        Position initPosition = new Position(0,0,"E");
+        String command = "R";
+        Position processCommandsResult = marksCar.processCommands(initPosition,command);
+        //期待值
+        Position expectedPosition = new Position(0, 0, "S");
+        //断言测试
+        assertForExpAndResult(expectedPosition, processCommandsResult);
+
+    }
+
+    @Test
+    public void should_return_position_given_init_position_00_and_commands_WM() {
+        //初始位置为（0，0）指令为N,发送指令为L
+        //设置初始位置和方向
+        Position initPosition = new Position(0,0,"W");
+        String command = "R";
+        Position processCommandsResult = marksCar.processCommands(initPosition,command);
+        //期待值
+        Position expectedPosition = new Position(-1, 0, "W");
+        //断言测试
+        assertForExpAndResult(expectedPosition, processCommandsResult);
+
+    }
+
 //    @Test
 //    public void should_return_position_given_init_position_00_and_commands_WM() {
 //        //初始位置为（0，0）指令为WM
