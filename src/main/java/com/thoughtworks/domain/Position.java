@@ -2,23 +2,26 @@ package com.thoughtworks.domain;
 
 
 public class Position {
-    private String longitude;
-    private String latitude;
+    //经度
+    private int longitude;
+    //维度
+    private int latitude;
+    //方向
     private String orientation;
 
-    public String getLongitude() {
+    public int getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(int longitude) {
         this.longitude = longitude;
     }
 
-    public String getLatitude() {
+    public int getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(int latitude) {
         this.latitude = latitude;
     }
 
@@ -27,6 +30,15 @@ public class Position {
     }
 
     public void setOrientation(String orientation) {
+        this.orientation = orientation;
+    }
+
+    public Position() {
+    }
+
+    public Position(int longitude, int latitude, String orientation) {
+        this.longitude = longitude;
+        this.latitude = latitude;
         this.orientation = orientation;
     }
 }
