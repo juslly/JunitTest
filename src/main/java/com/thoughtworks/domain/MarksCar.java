@@ -9,6 +9,13 @@ public class MarksCar {
             if("M".equals(command)){
                 resultPosition.setLatitude(initPosition.getLatitude() + 1);
             }
+            if("L".equals(command)){
+                resultPosition.setOrientation("W");
+            }
+            if("R".equals(command)){
+                resultPosition.setOrientation("E");
+            }
+
 
         }
 
